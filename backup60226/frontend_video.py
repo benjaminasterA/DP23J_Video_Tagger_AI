@@ -161,42 +161,6 @@ hr { border-color: var(--border) !important; }
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-
-/* [🎨] 파일 업로더 디자인 분리 (Separating File Uploader Design) */
-/* 1. 업로드 박스 안내 문구 및 버튼: 검정색 & 아쿠아 테두리 (Dropzone & Button: Black, Aqua Border) */
-[data-testid="stFileUploaderDropzone"] {
-    border: 10px solid #00f2ff !important;
-}
-[data-testid="stFileUploaderDropzone"] button {
-    border: 1px solid #00f2ff !important;
-}
-[data-testid="stFileUploaderDropzone"] *, 
-[data-testid="stFileUploaderDropzone"] button p {
-    color: #000000 !important;
-}
-
-/* 2. 업로드된 파일 정보 (파일명, 용량, 레이블): 흰색 (Uploaded File Info & Labels: White) */
-[data-testid="stFileUploaderFileData"] *, 
-[data-testid="stFileUploaderFileName"],
-[data-testid="stFileUploaderFileMetadata"],
-[data-testid="stFileUploader"] label p {
-    color: #ffffff !important;
-}
-
-/* [🎨] 라디오 버튼 텍스트 색상 흰색 고정 (Radio Button text color to white) */
-[data-testid="stRadio"] label p {
-    color: #ffffff !important;
-}
-
-/* [🎨] 슬라이더 레이블 텍스트 색상 흰색 고정 (Slider Label text color to white) */
-[data-testid="stSlider"] label p {
-    color: #ffffff !important;
-}
-
-/* [🎨] 셀렉트박스 레이블 텍스트 색상 흰색 고정 (Selectbox Label text color to white) */
-[data-testid="stSelectbox"] label p {
-    color: #ffffff !important;
-}
 </style>
 """, unsafe_allow_html=True)
 
@@ -204,15 +168,7 @@ hr { border-color: var(--border) !important; }
 # Sidebar (메뉴 구조 보존)
 # ─────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("""
-        <div style='font-size:31px; font-weight:bold; color:#00f2ff; line-height:1.2; font-family:"Space Mono", monospace;'>
-            🎬 비디오<br>
-            <span style='margin-left: 1.45em;'>태거 <span style='font-size: 150%;'>AI</span></span>
-        </div>
-        <div style='text-align:right;'>
-            <span style='font-size:12px; color:#ff4b4b; font-family: Space Mono;'>Ver 1.0</span>
-        </div>
-    """, unsafe_allow_html=True)
+    st.markdown("## 🎬 Video Tagger AI <span style='font-size:12px; color:#555;'>Ver 1.0</span>", unsafe_allow_html=True)
     st.markdown("---")
 
     st.markdown("### 📁 영상 업로드")
